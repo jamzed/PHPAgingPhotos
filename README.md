@@ -23,10 +23,11 @@ Sample use with PHP
 <?php
 
 include('imageClass.php');
-$imgobj = new Image();
-$imgobj->load_image("image_orig.jpg");
-$imgobj->crop();
-$imgobj->colorize(4);
-$imgobj->layer(4,30);
-$imgobj->save_image("foto.jpg");
+
+$imgobj = new Image();                    // create a new object
+$imgobj->load_image("image_orig.jpg");    // load image
+$imgobj->crop();                          // crop image
+$imgobj->colorize(4);                     // colorize image (RGB modification) (predefined values 1-4)
+$imgobj->layer(4,30);                     // put a layer on image (predefined 1-4, percentage)
+$imgobj->save_image("foto.jpg");          // save aged image
 ```
