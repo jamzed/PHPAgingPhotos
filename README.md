@@ -1,13 +1,13 @@
 PHPAgingPhotos
 ==============
 
-PHP class for aging your photos
+PHP class for aging your photos.
 
 Requirements:
 - PHP + gd library
 
 
-what we do
+What we do
 ==========
 
 - load your photo
@@ -16,15 +16,17 @@ what we do
 - add a layer (texture)
 - save your 'new' aged photo
 
-PHP code
+Sample use with PHP
 ========
 
-  <?php
-  include('imageClass.php');
-   
-  $imgobj = new Image();
-  $imgobj->load_image("image_orig.jpg");
-  $imgobj->crop();
-  $imgobj->colorize(4);
-  $imgobj->layer(4,30);
-  $imgobj->save_image("foto.jpg");
+```
+<?php
+
+include('imageClass.php');
+$imgobj = new Image();
+$imgobj->load_image("image_orig.jpg");
+$imgobj->crop();
+$imgobj->colorize(4);
+$imgobj->layer(4,30);
+$imgobj->save_image("foto.jpg");
+```
